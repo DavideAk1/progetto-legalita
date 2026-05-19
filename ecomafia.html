@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Danni dell'Ecomafia - Le Radici della Legalità</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Animazione specifica per questo layout: sollevamento e zoom */
+        .eco-card {
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+        }
+        .eco-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(141, 19, 36, 0.35);
+        }
+        .eco-card img {
+            transition: transform 0.5s ease;
+        }
+        .eco-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-transition-overlay"></div>
+    
+    <button id="theme-toggle" class="theme-toggle-btn">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+    </button>
+    
+    <nav class="subpage-nav">
+        <a href="index.html" class="back-btn">&larr; Torna alla Home</a>
+        <span class="nav-page-title">Danni dell'Ecomafia</span>
+    </nav>
+
+    <main class="container subpage-content">
+        
+        <header style="margin-bottom: 50px; text-align: center;">
+            <h1 style="font-size: 2.8rem; letter-spacing: 1px;">I Danni dell'Ecomafia</h1>
+            <p class="subtitle" style="color: var(--accent-color); font-weight: bold; font-size: 1.2rem; margin-top: 10px;">
+                Crimini contro l'Ambiente e la Salute
+            </p>
+        </header>
+
+        <section style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+            
+            <div class="text-column-glass eco-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                <div style="height: 220px; overflow: hidden; width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=600" alt="Ambiente 1" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 30px; flex-grow: 1;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 15px;">Chi era Paolo Borsellino</h3>
+                    <p style="font-size: 0.95rem; margin: 0;">Nato a Palermo il 19 gennaio 1940, dedicò tutta la sua vita alla lotta contro la mafia, diventando uno dei simboli più importanti della giustizia e del coraggio civile in Italia.</p>
+                </div>
+            </div>
+
+            <div class="text-column-glass eco-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                <div style="height: 220px; overflow: hidden; width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=600" alt="Ambiente 2" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 30px; flex-grow: 1;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 15px;">La lotta contro la mafia</h3>
+                    <p style="font-size: 0.95rem; margin: 0;">Insieme al magistrato Giovanni Falcone combatté la criminalità organizzata siciliana, in particolare l’organizzazione mafiosa chiamata Cosa Nostra negli anni '80.</p>
+                </div>
+            </div>
+
+            <div class="text-column-glass eco-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                <div style="height: 220px; overflow: hidden; width: 100%;">
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=600" alt="Ambiente 3" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 30px; flex-grow: 1;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 15px;">La strage di Via D'Amelio</h3>
+                    <p style="font-size: 0.95rem; margin: 0;">Il 19 luglio 1992 venne assassinato dalla mafia in una strage che causò la morte di cinque agenti della sua scorta: Agostino, Walter, Vincenzo, Emanuela e Claudio.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Selvaggio e Renata Fonte - Le Radici della Legalità</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Animazione cinemantica per il bandierone panoramico */
+        .panoramic-box {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: border-color 0.4s ease;
+        }
+        .panoramic-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6) contrast(1.1);
+            transition: filter 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .panoramic-box:hover img {
+            filter: brightness(0.85) contrast(1);
+            transform: scale(1.02);
+        }
+        .panoramic-box:hover {
+            border-color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-transition-overlay"></div>
+    
+    <button id="theme-toggle" class="theme-toggle-btn">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+    </button>
+    
+    <nav class="subpage-nav">
+        <a href="index.html" class="back-btn">&larr; Torna alla Home</a>
+        <span class="nav-page-title">Porto Selvaggio</span>
+    </nav>
+
+    <main class="container subpage-content">
+        
+        <header style="margin-bottom: 40px; text-align: center;">
+            <h1 style="font-size: 2.8rem; letter-spacing: 1px;">Porto Selvaggio</h1>
+            <p class="subtitle" style="color: var(--accent-color); font-weight: bold; font-size: 1.2rem; margin-top: 10px;">
+                Il Sacrificio di Renata Fonte per la Natura
+            </p>
+        </header>
+
+        <section style="max-width: 1200px; margin: 0 auto 40px auto; padding: 0 20px;">
+            <div class="panoramic-box">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1200" alt="Porto Selvaggio Panorama">
+            </div>
+        </section>
+
+        <section style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="text-column-glass" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px;">
+                
+                <div>
+                    <h2>Chi era Paolo Borsellino</h2>
+                    <p>Nato a Palermo il 19 gennaio 1940, fu un magistrato italiano che dedicò tutta la sua vita alla lotta contro la mafia, diventando uno dei simboli più importanti della giustizia e del coraggio civile in Italia.</p>
+                    <p>Insieme al magistrato Giovanni Falcone combatté la criminalità organizzata siciliana, in particolare l’organizzazione mafiosa chiamata Cosa Nostra.</p>
+                    
+                    <h3 style="margin-top: 25px; color: var(--accent-color);">La lotta contro la mafia</h3>
+                    <p>Negli anni ’80 Borsellino lavorò nel “pool antimafia” di Palermo, un gruppo di magistrati creato per indagare sulla mafia in modo coordinato. Grazie al loro lavoro fu possibile realizzare il famoso Maxiprocesso.</p>
+                </div>
+
+                <div>
+                    <h3 style="color: var(--accent-color); margin-top: 0;">La strage di Via D’Amelio</h3>
+                    <p>Il 19 luglio 1992 Paolo Borsellino venne assassinato dalla mafia nella strage di Via D’Amelio, a Palermo. Un’autobomba esplose sotto la casa della madre, causando la morte di Borsellino e di cinque agenti della sua scorta.</p>
+                    
+                    <blockquote style="margin: 25px 0 20px 0;">
+                        “La lotta alla mafia dev’essere innanzitutto un movimento culturale.”
+                    </blockquote>
+                    
+                    <h3 style="color: var(--accent-color);">L'eredità attuale</h3>
+                    <p>Il suo esempio continua a ispirare studenti, magistrati e cittadini italiani nella lotta contro ogni forma di criminalità organizzata. Ricordare significa comprendere quanto sia importante non rimanere in silenzio.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
