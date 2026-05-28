@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salvaguardia Beni Culturali - Le Radici della Legalità</title>
+    <title>Tutela dei Beni Culturali - Le Radici della Legalità</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Animazione Editoriale: Spostamento asimmetrico e rotazione */
-        .art-img-box {
-            border-radius: 15px;
+        /* Animazione cinematica per il bandierone panoramico */
+        .panoramic-box {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
             border: 1px solid rgba(255,255,255,0.1);
-            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+            transition: border-color 0.4s ease;
         }
-        .art-img-box:hover {
-            transform: scale(1.04) rotate(-1deg);
-            box-shadow: 0 15px 35px rgba(141, 19, 36, 0.3);
+        .panoramic-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6) contrast(1.1);
+            transition: filter 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .panoramic-box:hover img {
+            filter: brightness(0.85) contrast(1);
+            transform: scale(1.02);
+        }
+        .panoramic-box:hover {
+            border-color: var(--accent-color);
         }
     </style>
 </head>
@@ -36,40 +49,47 @@
     <main class="container subpage-content">
         
         <header style="margin-bottom: 40px; text-align: center;">
-            <h1 style="font-size: 2.8rem; letter-spacing: 1px;">Tutela dei Beni Culturali</h1>
-            <p class="subtitle" style="color: var(--accent-color); font-weight: bold; font-size: 1.2rem; margin-top: 10px;">
-                Proteggere l'Arte, la Storia e l'Identità Nazionale
+            <h1 style="font-size: 2.8rem; letter-spacing: 1px;">La Tutela dei Beni Culturali</h1>
+            <p class="subtitle" style="color: var(--accent-color); font-weight: bold; font-size: 1.2rem; margin-top: 10px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.5;">
+                L'arte e la bellezza come scudo contro la criminalità. Proteggere il patrimonio storico, artistico e paesaggistico significa difendere l'identità, la memoria e il futuro di un popolo.
             </p>
         </header>
 
-        <div class="split-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; gap: 50px;">
-            
-            <section class="text-column-glass" style="flex: 1.4;">
-                <h2>Chi era Paolo Borsellino</h2>
-                <p>Nato a Palermo il 19 gennaio 1940, fu un magistrato italiano che dedicò tutta la sua vita alla lotta contro la mafia, diventando uno dei simboli più importanti della giustizia e del coraggio civile in Italia.</p>
-                <p>Insieme al magistrato Giovanni Falcone combatté la criminalità organizzata siciliana, in particolare l’organizzazione mafiosa chiamata Cosa Nostra.</p>
+        <!-- SEZIONE ALTA: Grande Foto Panoramica Interattiva (Immagine Stock Arte/Firenze) -->
+        <section style="max-width: 1200px; margin: 0 auto 40px auto; padding: 0 20px;">
+            <div class="panoramic-box">
+                <img src="https://images.unsplash.com/photo-1601961405399-801fb1f34581?q=80&w=1200" alt="Patrimonio Culturale Italiano">
+            </div>
+        </section>
+
+        <!-- SEZIONE BASSA: Testo diviso in 2 colonne stilistiche affiancate -->
+        <section style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="text-column-glass" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px;">
                 
-                <h3 style="margin-top: 25px; color: var(--accent-color);">La lotta contro la mafia</h3>
-                <p>Negli anni ’80 Borsellino lavorò nel “pool antimafia” di Palermo, un gruppo di magistrati creato per indagare sulla mafia in modo coordinato. Grazie al loro lavoro fu possibile realizzare il famoso Maxiprocesso di Palermo, uno dei processi più importanti della storia italiana, che portò alla condanna di centinaia di mafiosi.</p>
-
-                <blockquote style="margin: 25px 0;">
-                    “La lotta alla mafia dev’essere innanzitutto un movimento culturale.”
-                </blockquote>
-
-                <h3 style="margin-top: 25px; color: var(--accent-color);">La strage di Via D’Amelio</h3>
-                <p>Il 19 luglio 1992 Paolo Borsellino venne assassinato dalla mafia nella strage di Via D’Amelio, a Palermo. Un’autobomba esplose sotto la casa della madre del magistrato, causando la morte di Borsellino e di cinque agenti della sua scorta.</p>
-            </section>
-
-            <section style="flex: 0.8; display: flex; flex-direction: column; gap: 30px; justify-content: center;">
-                <div class="art-img-box" style="height: 280px; width: 100%;">
-                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=600" alt="Arte 1" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- Colonna Sinistra -->
+                <div>
+                    <h2>L'assalto al patrimonio: il business dell'arte</h2>
+                    <p>L'Italia possiede un patrimonio culturale unico al mondo, ma questa immensa ricchezza è spesso finita nel mirino delle organizzazioni criminali. Il traffico illecito di opere d'arte, gli scavi archeologici clandestini e l'esportazione illegale di reperti rappresentano una delle fonti di guadagno più redditizie per le mafie, capaci di alimentare un mercato nero globale. Depredare la bellezza significa rubare la storia di una comunità per trasformarla in profitto privato.</p>
+                    
+                    <h3 style="margin-top: 25px; color: var(--accent-color);">Le ferite alla bellezza: le stragi del 1993</h3>
+                    <p>La criminalità organizzata non ha colpito solo gli uomini dello Stato, ma ha tentato di ricattare le istituzioni attaccando direttamente i simboli della cultura italiana. Il momento più drammatico di questa strategia terroristica è avvenuto nel 1993 con l'attentato di Via dei Georgofili a Firenze, a pochi passi dalla Galleria degli Uffizi, e la bomba al Padiglione d'Arte Contemporanea di Milano. Cosa Nostra colpì l'arte per ferire l'anima e l'economia del Paese, dimostrando quanto la cultura sia temuta dalle mafie.</p>
                 </div>
-                <div class="art-img-box" style="height: 340px; width: 90%; align-self: flex-end;">
-                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=600" alt="Arte 2" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-            </section>
 
-        </div>
+                <!-- Colonna Destra -->
+                <div>
+                    <h3 style="color: var(--accent-color); margin-top: 0;">I custodi della memoria: il Comando TPC</h3>
+                    <p>Per contrastare questo scempio, l'Italia si è dotata di un'eccellenza riconosciuta a livello internazionale: il Comando Carabinieri Tutela Patrimonio Culturale (TPC). Fondato nel 1969, è stato il primo reparto investigativo specializzato al mondo dedicato esclusivamente ai crimini contro l'arte. Grazie alla "Banca dati dei beni culturali illecitamente sottratti", la più grande al mondo, i Carabinieri recuperano ogni anno migliaia di opere d'arte, restituendo la memoria storica ai legittimi proprietari: i cittadini.</p>
+                    
+                    <blockquote style="margin: 25px 0 20px 0;">
+                        “La cultura e la bellezza sono i più grandi nemici della mentalità mafiosa, perché aprono la mente e insegnano la libertà.”
+                    </blockquote>
+                    
+                    <h3 style="color: var(--accent-color);">Un dovere civico: l'Articolo 9 della Costituzione</h3>
+                    <p>La difesa del patrimonio non è solo un compito delle forze dell'ordine, ma un pilastro della nostra democrazia, fortemente voluto dai padri costituentisti e sancito dall'Articolo 9 della Costituzione Italiana. Educare alla legalità significa comprendere che ogni monumento, quadro o paesaggio naturale appartiene alla collettività. Custodire questi beni dall'incuria, dal vandalismo e dalle eco-mafie è il primo passo per esercitare una cittadinanza attiva e consapevole.</p>
+                </div>
+
+            </div>
+        </section>
 
     </main>
     <script src="script.js"></script>
